@@ -1,0 +1,234 @@
+/************************* 
+	Media Queries
+///**********************/ 
+@media only screen and(max-width: 1199px) {
+h1, .h1 {font-size: 31px;line-height: 45px; } 
+h2, .h2 {font-size: 29px; line-height: 39px; }
+
+
+.mubarak {
+
+	.eid-content { 
+ 
+		.main-title {
+
+			.txt-rotate {
+
+				&:before { 
+					font-size: 80px;
+				}
+			}
+		}
+	}
+
+	.countdown-own {
+
+		.coustom-clock {
+
+			.hours, .minutes, .seconds, .date {
+				width: auto;
+				padding-right: 10px;
+
+				&:after {
+					background: transparent;
+				} 
+
+				span {
+					font-size: 25px;
+				}
+
+				&:hover {
+
+					span {
+						font-size: 30px;
+					}
+				}
+			}
+		}
+	}
+
+	.me {
+		right: 15%;
+
+		img {
+			max-width: 110px;
+		}
+	}
+}
+
+@keyframes eid_me {
+	0% {
+		right: 15%;
+	}
+
+	90% {
+		right: 19%;
+		z-index: 1;
+	}
+
+	100% {
+		right: 19%;
+	}
+}
+
+@keyframes eid_me_img {
+	100% {
+		max-width: 160px;
+	}
+}
+
+@keyframes eid_logo {
+	0% {
+		top: -120px;
+	}
+
+	50% {
+		left: 0;
+		top: -115px;
+	}
+
+	100% {
+		left: 150px;
+		top: -90px;
+	}
+}
+
+}/*/// 1199px ///*/
+
+@media only screen and(max-width: 767px) {
+h1, .h1 {font-size: 26px;line-height: 36px; } 
+h2, .h2 {font-size: 23px; line-height: 33px; }
+
+.mubarak {
+
+	.countdown-own {
+
+		.coustom-clock {
+
+			.hours, .minutes, .seconds, .date {
+				font-size: 15px;
+				padding-right: 5px;
+
+				span {
+					font-size: 18px;
+				}
+
+				&:hover {
+
+					span {
+						font-size: 20px;
+					}
+				}
+			}
+		}
+	}
+
+	.me {
+		right: 0%;
+
+		img {
+			max-width: 90px;
+		}
+	}
+}
+
+@keyframes eid_logo {
+	0% {
+		top: -115px;
+	}
+
+	50% {
+		left: 0;
+		top: -105px;
+	}
+
+	100% {
+		left: 20px;
+		top: -90px;
+	}
+}
+
+@keyframes eid_me {
+	0% {
+		right: 2%;
+	}
+
+	90% {
+		z-index: 1;
+	}
+
+	100% {
+		right: 10%;
+	}
+}
+
+@keyframes eid_me_img {
+ 
+	100% {
+		max-width: 250px;
+	}
+}
+
+}/*/// 767px ///*/
+@media only screen and(max-width: 575px) {
+h1, .h1 {font-size: 24px;line-height: 34px; } 
+h2, .h2 {font-size: 21px; line-height: 31px; }
+
+}/*/// 575px ///*/
+@media only screen and(max-width: 420px) {
+h1, .h1 {font-size: 22px;line-height: 32px; } 
+h2, .h2 {font-size: 19px; line-height: 29px; }
+
+.mubarak {
+
+	.countdown-own {
+
+		.coustom-clock {
+
+			.hours, .minutes, .seconds, .date {
+				font-size: 12px;
+				padding-right: 2px;
+
+				span {
+					font-size: 15px;
+				}
+
+				&:hover {
+
+					span {
+						font-size: 18px;
+					}
+				}
+			}
+		}
+	}
+}
+@keyframes eid_me_img {
+ 
+	100% {
+		max-width: 215px;
+	}
+}
+}/*/// 420px ///*/
+@media only screen and(max-width: 320px) {
+@keyframes eid_me {
+	0% {
+		right: 2%;
+	}
+
+	90% {
+		z-index: 1;
+	}
+
+	100% {
+		right: 3%;
+	}
+}
+
+@keyframes eid_me_img {
+ 
+	100% {
+		max-width: 210px;
+	}
+}
+}/*/// 320px ///*/

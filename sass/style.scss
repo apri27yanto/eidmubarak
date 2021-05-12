@@ -1,0 +1,408 @@
+/*
+Theme Name: Ribbas
+Author: Ribbas Interactive
+Author URI: https://ahmmedsabbirbd.github.io/ribbas
+Version: 1.0.0
+*/
+@import "base";
+
+@mixin box-shadow($px){
+    box-shadow: $px; 
+	-o-box-shadow: $px;
+    -ms-box-shadow: $px;
+    -moz-box-shadow: $px;
+	-khtml-box-shadow: $px;
+	-webkit-box-shadow: $px;
+}
+
+@mixin transition ($seconds) {
+	transition: $seconds;
+	-o-transition: $seconds;
+	-ms-transition: $seconds;
+	-moz-transition: $seconds;
+	-khtml-transition: $seconds;
+	-webkit-transition: $seconds;
+}
+
+// COLOR
+$black: #030808;
+$white: #FFF9F5;
+$primary: #F8D3E2;
+$secondary: #ffa4c9;
+// FONTS
+$mon: 'Montserrat', sans-serif;
+$caveat:  'Caveat', sans-serif;
+$poiet:  'Poiret One', sans-serif;
+
+body {
+	color: #67f78d;
+	font-size: 18px;
+	font-family: $mon;
+}
+h1, .h1 {color: $primary; font-size: 38px; line-height: 48px; font-weight: 900; }
+h2, .h2 {color: $primary; font-size: 34px; line-height: 44px; }
+
+html, body {
+	height: 100%;
+} 
+.clearfix {
+	clear: both; 
+	overflow: hidden; 
+	display: block;
+}
+
+.mubarak {
+	z-index: 1;
+	position: relative;
+
+	&:after {
+		top: 0;
+		content: "";
+		width: 100%;
+		z-index: -1;
+		opacity: 0.2;
+		height: 100%;
+		background: #333;
+		position: absolute;
+	}
+
+	.logo {
+		top: -130px;
+		opacity: 0.3;
+		position: absolute;
+
+		svg {
+			max-width: 40px;
+		}
+	}
+
+	.eid-content {
+		margin-left: 10px;
+
+		.happy {
+			opacity: 0;
+			font-size: 30px;
+			line-height: 30px;
+			margin-bottom: 20px;
+			font-family: $caveat;
+		} 
+
+		.title {
+			opacity: 0;
+		}
+		.main-title {
+			opacity: 0;
+
+			.txt-rotate {
+				opacity: 0;
+				font-weight: 700;
+				color: $secondary;
+				position: relative;
+				font-family: $poiet;
+
+				&:before {
+					right: -13px;
+					bottom: 13px;
+					content: ".";
+					font-size: 100px;
+					position: absolute;
+				}
+			}
+		}
+	}
+
+	.countdown-own {
+		top: 10px;
+		opacity: 0;
+		right: 10px;
+		position: absolute;
+
+		.coustom-clock {
+
+			.hours, .minutes, .seconds, .date {
+				z-index: 1;
+				width: 150px;
+				height: 150px;
+				color: $black;
+				font-size: 25px;
+				overflow: hidden;
+				margin-left: 20px;
+				border-radius: 50%;
+				position: relative;
+				text-align: center;
+				display: inline-block;
+				@include transition(all .3s ease);
+
+				&:after {
+					top: 0;
+					left: 0;
+					width: 100%;
+					z-index: -1;
+					content: "";
+					opacity: 0.3;
+					height: 100%;
+					position: absolute;
+					background-color: $white;
+					@include transition(all .3s ease);
+				}
+
+				&:first-child {
+					margin-left: 0;
+				}
+
+				span {
+					font-size: 35px;
+					padding-top: 22px;
+					display: inline-block;
+				}
+
+				&:hover {
+					transform: scale(1.1); 
+
+					&:after {
+						opacity: 0.7;
+					}
+
+					span {
+						font-size: 36px;
+						transition: .1s;
+					}
+				}
+			}
+		}
+	}
+
+	.me {
+		bottom: 0;
+		right: 32%;
+		z-index: -1;
+		position: absolute;
+
+		img {
+			opacity: 0.9;
+			max-width: 120px;
+		}
+	}
+
+	.behalf {
+		opacity: 0;
+		right: 50px;
+		bottom: 50px;
+		position: absolute;
+
+		.title {
+
+			.txt-rotate {
+				font-size: 120%;
+				font-family: $poiet;;
+
+				&:before {
+					right: -30px;
+					bottom: 48px;
+					content: "..";
+					font-size: 100px;
+					position: absolute;
+				}
+			}
+		}
+
+		a {
+			color: #67f78d;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+} 
+
+
+
+.mubarak { 
+
+	.logo { 
+ 		animation-delay: 4s;
+  		animation-duration: 6s;
+  		animation-name: eid_logo;
+  		animation-fill-mode: forwards;
+
+  		svg {
+  			animation-delay: 7s;
+	  		animation-duration: 4s;
+	  		animation-name: eid_svg;
+	  		animation-fill-mode: forwards;
+
+
+	  		.cls-6, .cls-5, .cls-4 {
+		  		animation-delay: 7s;
+		  		animation-duration: 2.5s;
+		  		animation-name: eid_svg_red;
+		  		animation-fill-mode: forwards;
+
+	  		}
+
+	  		.cls-8 {
+	  			fill: #fff;
+	  		}
+  		}
+	}
+
+	.eid-content {
+
+		.happy {
+			animation-delay: 15s;
+	  		animation-duration: 1.5s;
+	  		animation-fill-mode: forwards;
+	  		animation-name: eid_happy;
+		}
+
+		.title {
+			animation-delay: 12s;
+	  		animation-duration: 2s;
+	  		animation-fill-mode: forwards;
+	  		animation-name: eid_content_title;
+		}
+
+		.main-title {
+			animation-delay: 14s;
+	  		animation-duration: 2s;
+	  		animation-fill-mode: forwards;
+	  		animation-name: eid_content_main_title;
+
+			.txt-rotate { 
+		  		animation-delay: 15s;
+		  		animation-duration: 1s;
+		  		animation-fill-mode: forwards;
+		  		animation-name: eid_content_main_text_rotate;
+			}
+		}
+	}
+
+	.countdown-own {
+  		animation-delay: 16s;
+  		animation-duration: 1.5s;
+  		animation-fill-mode: forwards;
+  		animation-name: eid_countdown;
+	}
+
+	.me { 
+		animation-delay: 8s;
+  		animation-duration: 2s;
+  		animation-name: eid_me;
+  		animation-fill-mode: forwards;
+
+		img {
+	  		animation-delay: 9s;
+	  		animation-duration: 3s;
+	  		animation-name: eid_me_img;
+	  		animation-fill-mode: forwards;
+		}
+	}
+
+	.behalf { 
+  		animation-delay: 17s;
+  		animation-duration: 1.5s;
+  		animation-fill-mode: forwards;
+  		animation-name: eid_behalf;
+	}
+}
+
+@keyframes eid_content_title {
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes eid_content_main_title {
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes eid_content_main_text_rotate {
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes eid_countdown {
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes eid_happy {
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes eid_behalf {
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes eid_logo {
+	0% {
+		top: -130px;
+		opacity: 0.3;
+	}
+
+	50% {
+		left: 0;
+		top: -125px;
+		opacity: 0.5;
+	}
+
+	100% {
+		left: 200px;
+		top: -100px;
+	}
+}
+
+@keyframes eid_svg {
+	0% {
+		max-width: 40px;
+	}
+
+	50% {
+		max-width: 80px;
+	}
+
+	100% {
+		max-width: 90px;
+	}
+}
+
+@keyframes eid_svg_red { 
+	100% {
+		fill: #fff;
+	}
+}
+
+@keyframes eid_me {
+	0% {
+		right: 32%;
+		z-index: -1;
+	}
+
+	90% {
+		right: 33%;
+		z-index: 1;
+	}
+
+	100% {
+		right: 33%;
+		z-index: -1;
+	}
+}
+
+@keyframes eid_me_img {
+	100% {
+		max-width: 180px;
+	}
+}
+
+
+@import "responsive";
